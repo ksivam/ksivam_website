@@ -2,10 +2,69 @@
 
 <html lang="en">
     <head>
-        <meta charset="utf-8" />
-        <title>Hello World!!</title>
+        <title>ksivam</title>
+        <meta charset="utf-8"/>
+        <meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0;" name="viewport"/>
+        <meta name="apple-mobile-web-app-capable" content="yes"/>
+
+        <!-- css -->
+        <!--<link type="text/css" rel="stylesheet" href="http://code.jquery.com/mobile/1.3.2/jquery.mobile-1.3.2.min.css"/>-->
+        <link type="text/css" rel="stylesheet" href="http://code.jquery.com/mobile/1.1.0/jquery.mobile-1.1.0.min.css" />
+        <link type="text/css" rel="stylesheet" href="css/main.css"/>
+        <link type="text/css" rel="stylesheet" href="css/photoswipe.css"/>
+
+        <!-- jQuery api's -->
+        <!--<script type="text/javascript" src="//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>-->
+        <!--<script type="text/javascript" src="http://code.jquery.com/mobile/1.3.2/jquery.mobile-1.3.2.min.js"></script>-->
+        <script type="text/javascript" src="http://code.jquery.com/jquery-1.7.1.min.js"></script>
+        <script type="text/javascript" src="http://code.jquery.com/mobile/1.1.0/jquery.mobile-1.1.0.min.js"></script>
+
+        <!-- photo swipe api's -->
+        <script type="text/javascript" src="js/lib/klass.min.js"></script>
+        <script type="text/javascript" src="js/lib/code.photoswipe.jquery-3.0.5.1.min.js"></script>
+
+        <!-- Parse api's -->
+        <script type="text/javascript" src="http://www.parsecdn.com/js/parse-1.2.12.min.js"></script>
+
+        <!-- google map api's -->
     </head>
     <body>
-        
+        <div data-role="page" id="Home">
+            <div data-role="content">
+                <ul data-role="listview" data-inset="true">
+                    <li><a href="ajax-gallery1.html">First Gallery</a></li>
+                    <li><a href="ajax-gallery2.html">Second Gallery</a></li>
+                </ul>
+            </div>
+        </div>
+
+        <script type="text/javascript">
+            /*
+             * IMPORTANT!!!
+             * REMEMBER TO ADD  rel="external"  to your anchor tags.
+             * If you don't this will mess with how jQuery Mobile works
+             */
+            (function (window, $, PhotoSwipe) {
+                $(document).ready(function () {
+                    $('div.gallery-page')
+                            .live('pageshow', function (e) {
+                                var currentPage = $(e.target),
+                                        options = {},
+                                        photoSwipeInstance = $("ul.gallery a", e.target).photoSwipe(options, currentPage.attr('id'));
+                                return true;
+                            })
+                            .live('pagehide', function (e) {
+                                var currentPage = $(e.target),
+                                        photoSwipeInstance = PhotoSwipe.getInstance(currentPage.attr('id'));
+
+                                if (typeof photoSwipeInstance != "undefined" && photoSwipeInstance != null) {
+                                    PhotoSwipe.detatch(photoSwipeInstance);
+                                }
+
+                                return true;
+                            });
+                });
+            }(window, window.jQuery, window.Code.PhotoSwipe));
+        </script>
     </body>
 </html>
