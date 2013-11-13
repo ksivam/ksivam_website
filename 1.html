@@ -1,13 +1,16 @@
-<html class="ui-mobile"><head><base href="http://view.jquerymobile.com/1.3.2/dist/demos/examples/panels/panel-styling.html">
+<html class="ui-mobile">
+<head>
+    <!--<base href="http://view.jquerymobile.com/1.3.2/dist/demos/examples/panels/panel-styling.html">-->
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Panel styling - jQuery Mobile Demos</title>
-    <link rel="stylesheet" href="http://view.jquerymobile.com/1.3.2/dist/demos/css/themes/default/jquery.mobile.min.css">
-    <link rel="stylesheet" href="http://view.jquerymobile.com/1.3.2/dist/demos/_assets/css/jqm-demos.css">
+    <!--<link rel="stylesheet" href="http://view.jquerymobile.com/1.3.2/dist/demos/css/themes/default/jquery.mobile.min.css">-->
+    <link type="text/css" rel="stylesheet" href="http://code.jquery.com/mobile/1.3.2/jquery.mobile-1.3.2.min.css"/>
+    <!--<link rel="stylesheet" href="http://view.jquerymobile.com/1.3.2/dist/demos/_assets/css/jqm-demos.css">-->
     <link rel="shortcut icon" href="../../favicon.ico">
     <link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Open+Sans:300,400,700">
     <script src="http://view.jquerymobile.com/1.3.2/dist/demos/js/jquery.js"></script>
-    <script src="http://view.jquerymobile.com/1.3.2/dist/demos/_assets/js/index.js"></script>
+    <!--<script src="http://view.jquerymobile.com/1.3.2/dist/demos/_assets/js/index.js"></script>-->
     <script src="http://view.jquerymobile.com/1.3.2/dist/demos/js/jquery.mobile.min.js"></script>
     <style>
         /* Adjust the width of the left reveal menu.
@@ -36,27 +39,24 @@
             -moz-transform: translate3d(15em,0,0);
             transform: translate3d(15em,0,0);
         }
-
         /* Combined listview collapsible menu. */
         /* Unset negative margin bottom on the listviews. */
         #left-panel .ui-panel-inner > .ui-listview { margin-bottom: 0; }
         /* Unset top and bottom margin on collapsible set. */
         #left-panel .ui-collapsible-set { margin: 0; }
         /* The first collapsible contains the collapsible set. Make it fit exactly in the collapsible content. */
-        #left-panel .ui-panel-inner > .ui-collapsible > .ui-collapsible-content { padding-top: 0; padding-bottom: 0;  border-bottom: none; }
+        #left-panel .ui-panel-inner > .ui-collapsible > .ui-collapsible-content { padding-top: 0; padding-bottom: 0; border-bottom: none; }
         /* Remove border top if a collapsible comes after a listview. */
-        #left-panel .ui-panel-inner  > .ui-collapsible > .ui-collapsible-heading .ui-btn,
+        #left-panel .ui-panel-inner > .ui-collapsible > .ui-collapsible-heading .ui-btn,
         #left-panel .ui-collapsible.ui-first-child .ui-collapsible-heading .ui-btn { border-top: none; }
         /* Give the first collapsible heading the same padding, i.e. same height, as the list items. */
         #left-panel .ui-collapsible-heading .ui-btn-inner { padding: .7em 40px .7em 15px; }
         /* Give the other collapsible headings the same padding and font-size as the list divider. */
         #left-panel .ui-collapsible-set .ui-collapsible-heading .ui-btn-inner { padding: .5em 40px .5em 15px; font-size: 14px; }
-
         /* Styling of the close button in both panels. */
         #demo-page .ui-panel-inner > .ui-listview .ui-first-child {
             background: #eee;
-        }
-
+            }
         /* Reveal menu shadow on top of the list items */
         #demo-page .ui-panel-display-reveal {
             -webkit-box-shadow: none;
@@ -68,7 +68,6 @@
             -moz-box-shadow: -5px 0px 5px rgba(0,0,0,.15);
             box-shadow: -5px 0px 5px rgba(0,0,0,.15);
         }
-
         /* Use the ui-body class of your page theme (ui-body-d in this demo) to set a background image.
         This class will be added to the content wrapper, while the page itself gets the same background
         as the panel before opening the panel. */
@@ -76,7 +75,6 @@
             background-repeat: repeat-x;
             background-position: left bottom;
         }
-
         /* Styling of the page contents */
         .article p {
             margin: 0 0 1em;
@@ -103,7 +101,7 @@
         }
         @media all and (min-width:769px) {
             .article {
-                max-width: 994px;
+            max-width: 994px;
                 margin: 0 auto;
                 padding-top: 4em;
                 -webkit-column-count: 2;
@@ -111,114 +109,78 @@
                 column-count: 2;
                 -webkit-column-gap: 2em;
                 -moz-column-gap: 2em;
-                column-gap: 2em;
+                olumn-gap: 2em;
             }
             /* Fix for issue with buttons and form elements
-            if CSS columns are used on a page with a panel. */
+    if CSS columns are used on a page with a panel. */
+
             .article a.ui-btn {
                 -webkit-transform: translate3d(0,0,0);
             }
         }
     </style>
 </head>
-<body class="ui-mobile-viewport ui-overlay-d">
-
-<div data-role="page" id="demo-page" data-theme="d" data-url="demo-page" tabindex="0" class="ui-page ui-body-d ui-page-panel ui-page-active" style="min-height: 192px;">
-
-    <div class="ui-panel-content-wrap ui-body-d ui-panel-animate ui-panel-content-wrap-closed"><div data-role="header" data-theme="c" class="ui-header ui-bar-c" role="banner">
-        <h1 class="ui-title" role="heading" aria-level="1">Bikes</h1>
-        <a href="#left-panel" data-icon="bars" data-iconpos="notext" data-shadow="false" data-iconshadow="false" class="ui-btn-left ui-btn ui-btn-up-c ui-btn-corner-all ui-btn-icon-notext" data-corners="true" data-wrapperels="span" data-theme="c" title="Menu"><span class="ui-btn-inner"><span class="ui-btn-text">Menu</span><span class="ui-icon ui-icon-bars">&nbsp;</span></span></a>
-    </div><div data-role="content" class="ui-content" role="main">
-
-        <div class="article">
-            <p><img src="../../_assets/img/bike.jpg" alt="Fixed Gear bike"></p>
-
-            <h2>Fixed Gear</h2>
-
-            <p>A fixed-gear or fixed-wheel bicycle, commonly known as a fixie, is a bicycle that has a drivetrain with no freewheel mechanism. The freewheel was developed early in the history of bicycle design but the fixed-gear bicycle remained the standard track racing design. More recently the 'fixie' has become a popular alternative among mainly urban cyclists, offering the advantages of simplicity compared with the standard multi-geared bicycle.</p>
-
-            <p><small>Source: Wikipedia</small></p>
-
-            <p><a href="#right-panel" data-role="button" data-theme="b" data-inline="true" data-mini="true" data-shadow="false" data-corners="true" data-iconshadow="true" data-wrapperels="span" class="ui-btn ui-btn-up-b ui-btn-corner-all ui-mini ui-btn-inline"><span class="ui-btn-inner"><span class="ui-btn-text">Share</span></span></a></p>
-
-        </div><!-- /article -->
-
-    </div></div><!-- /header -->
-
-    <!-- /content -->
-
-    <div data-role="panel" id="left-panel" data-theme="c" class="ui-panel ui-panel-position-left ui-panel-display-reveal ui-panel-closed ui-body-c ui-panel-animate">
-
-        <div class="ui-panel-inner"><ul data-role="listview" data-theme="d" class="ui-listview">
-            <li data-icon="delete" data-corners="false" data-shadow="false" data-iconshadow="true" data-wrapperels="div" data-iconpos="right" data-theme="d" class="ui-btn ui-btn-up-d ui-btn-icon-right ui-li-has-arrow ui-li ui-first-child"><div class="ui-btn-inner ui-li"><div class="ui-btn-text"><a href="#" data-rel="close" class="ui-link-inherit">Close</a></div><span class="ui-icon ui-icon-delete ui-icon-shadow">&nbsp;</span></div></li>
-            <li data-role="list-divider" role="heading" class="ui-li ui-li-divider ui-bar-b">Menu</li>
-            <li data-icon="back" data-corners="false" data-shadow="false" data-iconshadow="true" data-wrapperels="div" data-iconpos="right" data-theme="d" class="ui-btn ui-btn-up-d ui-btn-icon-right ui-li-has-arrow ui-li ui-last-child"><div class="ui-btn-inner ui-li"><div class="ui-btn-text"><a href="#demo-intro" data-rel="back" class="ui-link-inherit">Demo intro</a></div><span class="ui-icon ui-icon-back ui-icon-shadow">&nbsp;</span></div></li>
-        </ul><div data-role="collapsible" data-inset="false" data-iconpos="right" data-theme="d" data-content-theme="d" class="ui-collapsible ui-collapsible-themed-content ui-collapsible-collapsed"><h3 class="ui-collapsible-heading ui-collapsible-heading-collapsed"><a href="#" class="ui-collapsible-heading-toggle ui-btn ui-btn-up-d ui-fullsize ui-btn-icon-right" data-corners="false" data-shadow="false" data-iconshadow="true" data-wrapperels="span" data-icon="plus" data-iconpos="right" data-theme="d" data-mini="false"><span class="ui-btn-inner"><span class="ui-btn-text">Categories<span class="ui-collapsible-heading-status"> click to expand contents</span></span><span class="ui-icon ui-icon-plus ui-icon-shadow">&nbsp;</span></span></a></h3><div class="ui-collapsible-content ui-body-d ui-collapsible-content-collapsed" aria-hidden="true">
-
-
-
-            <div data-role="collapsible-set" data-inset="false" data-iconpos="right" data-theme="b" data-content-theme="d" class="ui-collapsible-set">
-
-                <div data-role="collapsible" class="ui-collapsible ui-collapsible-themed-content ui-collapsible-collapsed ui-first-child"><h3 class="ui-collapsible-heading ui-collapsible-heading-collapsed"><a href="#" class="ui-collapsible-heading-toggle ui-btn ui-btn-up-b ui-btn-icon-right" data-corners="false" data-shadow="false" data-iconshadow="true" data-wrapperels="span" data-icon="plus" data-iconpos="right" data-theme="b"><span class="ui-btn-inner"><span class="ui-btn-text">Bikes<span class="ui-collapsible-heading-status"> click to expand contents</span></span><span class="ui-icon ui-icon-plus ui-icon-shadow">&nbsp;</span></span></a></h3><div class="ui-collapsible-content ui-body-d ui-collapsible-content-collapsed" aria-hidden="true">
-
-
-
-                    <ul data-role="listview" class="ui-listview">
-                        <li data-corners="false" data-shadow="false" data-iconshadow="true" data-wrapperels="div" data-icon="arrow-r" data-iconpos="right" data-theme="d" class="ui-btn ui-btn-up-d ui-btn-icon-right ui-li-has-arrow ui-li ui-first-child"><div class="ui-btn-inner ui-li"><div class="ui-btn-text"><a href="#" class="ui-link-inherit">Road</a></div><span class="ui-icon ui-icon-arrow-r ui-icon-shadow">&nbsp;</span></div></li>
-                        <li data-corners="false" data-shadow="false" data-iconshadow="true" data-wrapperels="div" data-icon="arrow-r" data-iconpos="right" data-theme="d" class="ui-btn ui-btn-up-d ui-btn-icon-right ui-li-has-arrow ui-li"><div class="ui-btn-inner ui-li"><div class="ui-btn-text"><a href="#" class="ui-link-inherit">ATB</a></div><span class="ui-icon ui-icon-arrow-r ui-icon-shadow">&nbsp;</span></div></li>
-                        <li data-corners="false" data-shadow="false" data-iconshadow="true" data-wrapperels="div" data-icon="arrow-r" data-iconpos="right" data-theme="d" class="ui-btn ui-btn-up-d ui-btn-icon-right ui-li-has-arrow ui-li"><div class="ui-btn-inner ui-li"><div class="ui-btn-text"><a href="#" class="ui-link-inherit">Fixed Gear</a></div><span class="ui-icon ui-icon-arrow-r ui-icon-shadow">&nbsp;</span></div></li>
-                        <li data-corners="false" data-shadow="false" data-iconshadow="true" data-wrapperels="div" data-icon="arrow-r" data-iconpos="right" data-theme="d" class="ui-btn ui-btn-up-d ui-btn-icon-right ui-li-has-arrow ui-li ui-last-child"><div class="ui-btn-inner ui-li"><div class="ui-btn-text"><a href="#" class="ui-link-inherit">Cruiser</a></div><span class="ui-icon ui-icon-arrow-r ui-icon-shadow">&nbsp;</span></div></li>
-                    </ul>
-
-                </div></div><!-- /collapsible -->
-
-                <div data-role="collapsible" class="ui-collapsible ui-collapsible-themed-content ui-collapsible-collapsed"><h3 class="ui-collapsible-heading ui-collapsible-heading-collapsed"><a href="#" class="ui-collapsible-heading-toggle ui-btn ui-btn-up-b ui-btn-icon-right" data-corners="false" data-shadow="false" data-iconshadow="true" data-wrapperels="span" data-icon="plus" data-iconpos="right" data-theme="b"><span class="ui-btn-inner"><span class="ui-btn-text">Cars<span class="ui-collapsible-heading-status"> click to expand contents</span></span><span class="ui-icon ui-icon-plus ui-icon-shadow">&nbsp;</span></span></a></h3><div class="ui-collapsible-content ui-body-d ui-collapsible-content-collapsed" aria-hidden="true">
-
-
-
-                    <ul data-role="listview" class="ui-listview">
-                        <li data-corners="false" data-shadow="false" data-iconshadow="true" data-wrapperels="div" data-icon="arrow-r" data-iconpos="right" data-theme="d" class="ui-btn ui-btn-up-d ui-btn-icon-right ui-li-has-arrow ui-li ui-first-child"><div class="ui-btn-inner ui-li"><div class="ui-btn-text"><a href="#" class="ui-link-inherit">SUV</a></div><span class="ui-icon ui-icon-arrow-r ui-icon-shadow">&nbsp;</span></div></li>
-                        <li data-corners="false" data-shadow="false" data-iconshadow="true" data-wrapperels="div" data-icon="arrow-r" data-iconpos="right" data-theme="d" class="ui-btn ui-btn-up-d ui-btn-icon-right ui-li-has-arrow ui-li"><div class="ui-btn-inner ui-li"><div class="ui-btn-text"><a href="#" class="ui-link-inherit">Sport</a></div><span class="ui-icon ui-icon-arrow-r ui-icon-shadow">&nbsp;</span></div></li>
-                        <li data-corners="false" data-shadow="false" data-iconshadow="true" data-wrapperels="div" data-icon="arrow-r" data-iconpos="right" data-theme="d" class="ui-btn ui-btn-up-d ui-btn-icon-right ui-li-has-arrow ui-li ui-last-child"><div class="ui-btn-inner ui-li"><div class="ui-btn-text"><a href="#" class="ui-link-inherit">Convertible</a></div><span class="ui-icon ui-icon-arrow-r ui-icon-shadow">&nbsp;</span></div></li>
-                    </ul>
-
-                </div></div><!-- /collapsible -->
-
-                <div data-role="collapsible" class="ui-collapsible ui-collapsible-themed-content ui-collapsible-collapsed ui-last-child"><h3 class="ui-collapsible-heading ui-collapsible-heading-collapsed"><a href="#" class="ui-collapsible-heading-toggle ui-btn ui-btn-up-b ui-btn-icon-right" data-corners="false" data-shadow="false" data-iconshadow="true" data-wrapperels="span" data-icon="plus" data-iconpos="right" data-theme="b"><span class="ui-btn-inner"><span class="ui-btn-text">Boats<span class="ui-collapsible-heading-status"> click to expand contents</span></span><span class="ui-icon ui-icon-plus ui-icon-shadow">&nbsp;</span></span></a></h3><div class="ui-collapsible-content ui-body-d ui-collapsible-content-collapsed" aria-hidden="true">
-
-
-
-                    <ul data-role="listview" class="ui-listview">
-                        <li data-corners="false" data-shadow="false" data-iconshadow="true" data-wrapperels="div" data-icon="arrow-r" data-iconpos="right" data-theme="d" class="ui-btn ui-btn-up-d ui-btn-icon-right ui-li-has-arrow ui-li ui-first-child"><div class="ui-btn-inner ui-li"><div class="ui-btn-text"><a href="#" class="ui-link-inherit">Runabout</a></div><span class="ui-icon ui-icon-arrow-r ui-icon-shadow">&nbsp;</span></div></li>
-                        <li data-corners="false" data-shadow="false" data-iconshadow="true" data-wrapperels="div" data-icon="arrow-r" data-iconpos="right" data-theme="d" class="ui-btn ui-btn-up-d ui-btn-icon-right ui-li-has-arrow ui-li"><div class="ui-btn-inner ui-li"><div class="ui-btn-text"><a href="#" class="ui-link-inherit">Motorboat</a></div><span class="ui-icon ui-icon-arrow-r ui-icon-shadow">&nbsp;</span></div></li>
-                        <li data-corners="false" data-shadow="false" data-iconshadow="true" data-wrapperels="div" data-icon="arrow-r" data-iconpos="right" data-theme="d" class="ui-btn ui-btn-up-d ui-btn-icon-right ui-li-has-arrow ui-li ui-last-child"><div class="ui-btn-inner ui-li"><div class="ui-btn-text"><a href="#" class="ui-link-inherit">Sailboat</a></div><span class="ui-icon ui-icon-arrow-r ui-icon-shadow">&nbsp;</span></div></li>
-
-                    </ul>
-
-                </div></div><!-- /collapsible -->
-
-            </div><!-- /collapsible-set -->
-
-        </div></div></div>
-
-        <!-- /collapsible -->
-
-    </div><!-- /panel -->
-
-    <div data-role="panel" id="right-panel" data-display="overlay" data-position="right" data-theme="c" class="ui-panel ui-panel-position-right ui-panel-display-overlay ui-panel-closed ui-body-c ui-panel-animate">
-
-        <div class="ui-panel-inner"><ul data-role="listview" data-theme="d" data-icon="false" class="ui-listview">
-            <li data-icon="delete" data-corners="false" data-shadow="false" data-iconshadow="true" data-wrapperels="div" data-iconpos="right" data-theme="d" class="ui-btn ui-btn-up-d ui-btn-icon-right ui-li-has-arrow ui-li ui-first-child"><div class="ui-btn-inner ui-li"><div class="ui-btn-text"><a href="#" data-rel="close" class="ui-link-inherit">Close</a></div><span class="ui-icon ui-icon-delete ui-icon-shadow">&nbsp;</span></div></li>
-            <li data-role="list-divider" role="heading" class="ui-li ui-li-divider ui-bar-b">Share this page</li>
-            <li data-corners="false" data-shadow="false" data-iconshadow="true" data-wrapperels="div" data-icon="false" data-iconpos="right" data-theme="d" class="ui-btn ui-btn-up-d ui-btn-icon-right ui-li-has-arrow ui-li"><div class="ui-btn-inner ui-li"><div class="ui-btn-text"><a href="#" class="ui-link-inherit">Twitter</a></div></div></li>
-            <li data-corners="false" data-shadow="false" data-iconshadow="true" data-wrapperels="div" data-icon="false" data-iconpos="right" data-theme="d" class="ui-btn ui-btn-up-d ui-btn-icon-right ui-li-has-arrow ui-li"><div class="ui-btn-inner ui-li"><div class="ui-btn-text"><a href="#" class="ui-link-inherit">Facebook</a></div></div></li>
-            <li data-corners="false" data-shadow="false" data-iconshadow="true" data-wrapperels="div" data-icon="false" data-iconpos="right" data-theme="d" class="ui-btn ui-btn-up-d ui-btn-icon-right ui-li-has-arrow ui-li"><div class="ui-btn-inner ui-li"><div class="ui-btn-text"><a href="#" class="ui-link-inherit">Google +</a></div></div></li>
-            <li data-corners="false" data-shadow="false" data-iconshadow="true" data-wrapperels="div" data-icon="false" data-iconpos="right" data-theme="d" class="ui-btn ui-btn-up-d ui-btn-icon-right ui-li-has-arrow ui-li ui-last-child"><div class="ui-btn-inner ui-li"><div class="ui-btn-text"><a href="#" class="ui-link-inherit">Mail</a></div></div></li>
-        </ul></div>
-
-    </div><!-- /panel -->
-
-    <div class="ui-panel-dismiss" data-panelid="left-panel"></div><div class="ui-panel-dismiss" data-panelid="right-panel"></div></div><!-- /page -->
-
-
-<div class="ui-loader ui-corner-all ui-body-a ui-loader-default"><span class="ui-icon ui-icon-loading"></span><h1>loading</h1></div></body></html>
+<body>
+<div data-role="page" id="demo-page" data-theme="d">
+        <div data-role="header" data-theme="c">
+            <h1>Bikes</h1>
+            <a href="#left-panel" data-icon="bars" data-iconpos="notext" data-shadow="false" data-iconshadow="false">Menu</a>
+        </div><!-- /header -->
+        <div data-role="content">
+            <div class="article">
+                <p><img src="../../_assets/img/bike.jpg" alt="Fixed Gear bike"></p>
+                <h2>Fixed Gear</h2>
+                <p>A fixed-gear or fixed-wheel bicycle, commonly known as a fixie, is a bicycle that has a drivetrain with no freewheel mechanism. The freewheel was developed early in the history of bicycle design but the fixed-gear bicycle remained the standard track racing design. More recently the 'fixie' has become a popular alternative among mainly urban cyclists, offering the advantages of simplicity compared with the standard multi-geared bicycle.</p>
+                <p><small>Source: Wikipedia</small></p>
+                <p><a href="#right-panel" data-role="button" data-theme="b" data-inline="true" data-mini="true" data-shadow="false">Share</a></p>
+            </div><!-- /article -->
+        </div><!-- /content -->
+        <div data-role="panel" id="left-panel" data-theme="c">
+            <ul data-role="listview" data-theme="d">
+                <li data-icon="delete"><a href="#" data-rel="close">Close</a></li>
+                <li data-role="list-divider">Menu</li>
+                <li data-icon="back"><a href="#demo-intro" data-rel="back">Demo intro</a></li>
+            </ul>
+            <div data-role="collapsible" data-inset="false" data-iconpos="right" data-theme="d" data-content-theme="d">
+              <h3>Categories</h3>
+              <div data-role="collapsible-set" data-inset="false" data-iconpos="right" data-theme="b" data-content-theme="d">
+                <div data-role="collapsible">
+                  <h3>Bikes</h3>
+                  <ul data-role="listview">
+                    <li><a href="#">Road</a></li>
+                    <li><a href="#">ATB</a></li>
+                    <li><a href="#">Fixed Gear</a></li>
+                    <li><a href="#">Cruiser</a></li>
+                  </ul>
+                </div><!-- /collapsible -->
+                <div data-role="collapsible">
+                  <h3>Cars</h3>
+                  <ul data-role="listview">
+                    <li><a href="#">SUV</a></li>
+                    <li><a href="#">Sport</a></li>
+                    <li><a href="#">Convertible</a></li>
+                  </ul>
+                </div><!-- /collapsible -->
+                <div data-role="collapsible">
+                  <h3>Boats</h3>
+                  <ul data-role="listview">
+                    <li><a href="#">Runabout</a></li>
+                    <li><a href="#">Motorboat</a></li>
+                    <li><a href="#">Sailboat</a></li>
+                  </ul>
+                </div><!-- /collapsible -->
+              </div><!-- /collapsible-set -->
+            </div><!-- /collapsible -->
+        </div><!-- /panel -->
+        <div data-role="panel" id="right-panel" data-display="overlay" data-position="right" data-theme="c">
+            <ul data-role="listview" data-theme="d" data-icon="false">
+                <li data-icon="delete"><a href="#" data-rel="close">Close</a></li>
+                <li data-role="list-divider">Share this page</li>
+                <li><a href="#">Twitter</a></li>
+                <li><a href="#">Facebook</a></li>
+                <li><a href="#">Google +</a></li>
+                <li><a href="#">Mail</a></li>
+            </ul>
+        </div><!-- /panel -->
+</div>
+</body></html>
