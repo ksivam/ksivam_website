@@ -19,14 +19,14 @@
         Then delete the selectors/rules for display modes (reveal/push/overlay) and the position (left/right) that you don't use.
         If you don't use fixed toolbars on your page you can delete those selectors as well.
         Narrow the scope of the selectors to prevent other panels being affected by the overrides. */
-        #main-page .ui-header{
-            height: 6em;
-            background-image: url('images/banner.jpg');
-            background-size: contain;
-        }
+        /*#main-page .ui-header{*/
+            /*height: 6em;*/
+            /*background-image: url('images/banner.jpg');*/
+            /*background-size: contain;*/
+        /*}*/
 
         #main-page #left-panel.ui-panel {
-            width: 6.5em;
+            width: 7em;
         }
 
         #main-page #left-panel.ui-panel-closed {
@@ -37,13 +37,21 @@
             left: 0;
         }
 
-        #main-page #left-panel .ui-listview li:first-child a{
+        /*#main-page #left-panel .ui-listview li:first-child a{*/
             /*padding-top: 4.30em;*/
             /*text-align: center;*/
             /*padding-bottom: 4.30em;*/
-            padding-top: 1.5em;
+            /*padding-top: 1.5em;*/
+            /*text-align: center;*/
+            /*padding-bottom: 1.5em;*/
+        /*}*/
+
+        #main-page #nav-button .ui-btn-text {
+            font-size:1.5em;
+            font-weight:bold;
+            line-height: 22px;
+            font-family: "Reenie Beanie", cursive;
             text-align: center;
-            padding-bottom: 1.5em;
         }
 
         #main-page #left-panel .ui-listview li a {
@@ -58,16 +66,16 @@
 
         #main-page .ui-panel-content-wrap-position-left.ui-panel-content-wrap-open,
         .ui-panel-dismiss-position-left.ui-panel-dismiss-open {
-            left: 6.5em;
-            right: -6.5em;
+            left: 7em;
+            right: -7em;
         }
 
         #main-page .ui-panel-animate.ui-panel-content-wrap-position-left.ui-panel-content-wrap-open.ui-panel-content-wrap-display-reveal {
             left: 0;
             right: 0;
-            -webkit-transform: translate3d(6.5em, 0, 0);
-            -moz-transform: translate3d(6.5em, 0, 0);
-            transform: translate3d(6.5em, 0, 0);
+            -webkit-transform: translate3d(7em, 0, 0);
+            -moz-transform: translate3d(7em, 0, 0);
+            transform: translate3d(7em, 0, 0);
         }
 
         /* Combined listview collapsible menu. */
@@ -154,13 +162,14 @@
 </head>
 <body>
 <div data-role="page" id="main-page" data-theme="d">
-    <div data-role="header" data-theme="c">
-        <h1>Bikes</h1>
-        <a href="#left-panel" data-icon="bars" data-iconpos="notext" data-shadow="false" data-iconshadow="false">Menu</a>
-    </div>
+    <a id="nav-button" href="#left-panel" data-role="button" data-icon="arrow-d" data-iconpos="right" data-inline="true">More</a>
+    <!--<div data-role="header" data-theme="c">-->
+        <!--&lt;!&ndash;<a href="#left-panel" data-icon="bars" data-iconpos="notext" data-shadow="false" data-iconshadow="false">Menu</a>&ndash;&gt;-->
+        <!---->
+    <!--</div>-->
     <!-- /header -->
     <div data-role="content">
-        <p><a href="#left-panel" data-role="button" data-theme="b" data-inline="true" data-mini="true" data-shadow="false">Share</a></p>
+
         <!-- /article -->
     </div>
     <!-- /content -->
