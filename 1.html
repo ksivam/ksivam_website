@@ -19,7 +19,7 @@
         If you don't use fixed toolbars on your page you can delete those selectors as well.
         Narrow the scope of the selectors to prevent other panels being affected by the overrides. */
         #main-page #left-panel.ui-panel {
-            width: 15em;
+            width: 6.5em;
         }
         #main-page #left-panel.ui-panel-closed {
             width: 0;
@@ -82,17 +82,17 @@
         }
 
         /* Reveal menu shadow on top of the list items */
-        #main-page .ui-panel-display-reveal {
-            -webkit-box-shadow: none;
-            -moz-box-shadow: none;
-            box-shadow: none;
-        }
+        /*#main-page .ui-panel-display-reveal {*/
+            /*-webkit-box-shadow: none;*/
+            /*-moz-box-shadow: none;*/
+            /*box-shadow: none;*/
+        /*}*/
 
-        #main-page .ui-panel-content-wrap-position-left {
-            -webkit-box-shadow: -5px 0px 5px rgba(0, 0, 0, .15);
-            -moz-box-shadow: -5px 0px 5px rgba(0, 0, 0, .15);
-            box-shadow: -5px 0px 5px rgba(0, 0, 0, .15);
-        }
+        /*#main-page .ui-panel-content-wrap-position-left {*/
+            /*-webkit-box-shadow: -5px 0px 5px rgba(0, 0, 0, .15);*/
+            /*-moz-box-shadow: -5px 0px 5px rgba(0, 0, 0, .15);*/
+            /*box-shadow: -5px 0px 5px rgba(0, 0, 0, .15);*/
+        /*}*/
 
         /* Use the ui-body class of your page theme (ui-body-d in this demo) to set a background image.
         This class will be added to the content wrapper, while the page itself gets the same background
@@ -102,25 +102,25 @@
             background-position: left bottom;
         }
 
-        @media all and (min-width: 769px) {
-            .article {
-                max-width: 994px;
-                margin: 0 auto;
-                padding-top: 4em;
-                -webkit-column-count: 2;
-                -moz-column-count: 2;
-                column-count: 2;
-                -webkit-column-gap: 2em;
-                -moz-column-gap: 2em;
-                olumn-gap: 2em;
-            }
+        /*@media all and (min-width: 769px) {*/
+            /*.article {*/
+                /*max-width: 994px;*/
+                /*margin: 0 auto;*/
+                /*padding-top: 4em;*/
+                /*-webkit-column-count: 2;*/
+                /*-moz-column-count: 2;*/
+                /*column-count: 2;*/
+                /*-webkit-column-gap: 2em;*/
+                /*-moz-column-gap: 2em;*/
+                /*olumn-gap: 2em;*/
+            /*}*/
 
-            /* Fix for issue with buttons and form elements
-    if CSS columns are used on a page with a panel. */
-            .article a.ui-btn {
-                -webkit-transform: translate3d(0, 0, 0);
-            }
-        }
+            /* Fix for issue with buttons and form elements*/
+/*    if CSS columns are used on a page with a panel. */
+            /*.article a.ui-btn {*/
+                /*-webkit-transform: translate3d(0, 0, 0);*/
+            /*}*/
+        /*}*/
     </style>
 </head>
 <body>
