@@ -3,81 +3,21 @@
     <head>
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
+
         <title>ksivam</title>
+
+        <!-- jquery mobile css -->
         <link type="text/css" rel="stylesheet" href="http://code.jquery.com/mobile/1.3.2/jquery.mobile-1.3.2.min.css"/>
-        <link rel='stylesheet' type='text/css' href="http://fonts.googleapis.com/css?family=Open+Sans:300,400,700">
-        <link rel='stylesheet' type='text/css' href='http://fonts.googleapis.com/css?family=Reenie+Beanie&v2'>
-        <script src="http://view.jquerymobile.com/1.3.2/dist/demos/js/jquery.js"></script>
-        <script src="http://view.jquerymobile.com/1.3.2/dist/demos/js/jquery.mobile.min.js"></script>
-        <style>
-            /* Adjust the width of the left reveal menu.
-            Copy all CSS from jquery.mobile.panel.css and delete the properties other than width, left, right and transform.
-            Then delete the selectors/rules for display modes (reveal/push/overlay) and the position (left/right) that you don't use.
-            If you don't use fixed toolbars on your page you can delete those selectors as well.
-            Narrow the scope of the selectors to prevent other panels being affected by the overrides. */
-            #main-page #left-panel.ui-panel {
-                width: 7em;
-            }
+        <!-- google fonts css -->
+        <link type="text/css" rel='stylesheet' href="http://fonts.googleapis.com/css?family=Open+Sans:300,400,700">
+        <link type="text/css" rel='stylesheet' href='http://fonts.googleapis.com/css?family=Reenie+Beanie&v2'>
+        <!-- project css -->
+        <link type="text/css" rel="stylesheet" href="css/panel.css"/>
 
-            #main-page #left-panel.ui-panel-closed {
-                width: 0;
-            }
+        <!-- jQuery api's -->
+        <script type="text/javascript" src="//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+        <script type="text/javascript" src="http://code.jquery.com/mobile/1.3.2/jquery.mobile-1.3.2.min.js"></script>
 
-            #main-page .ui-panel-position-left.ui-panel-display-reveal {
-                left: 0;
-            }
-
-            #main-page #nav-button .ui-btn-text {
-                font-size:1.5em;
-                font-weight:bold;
-                line-height: 22px;
-                font-family: "Reenie Beanie", cursive;
-                text-align: center;
-            }
-
-            #main-page #left-panel .ui-listview li a {
-                font-size:1.5em;
-                font-weight:bold;
-                line-height: 22px;
-                font-family: "Reenie Beanie", cursive;
-                text-align: left;
-                padding-top: .7em;
-                padding-right: 1.5em;
-            }
-
-            #main-page .ui-panel-content-wrap-position-left.ui-panel-content-wrap-open,
-            .ui-panel-dismiss-position-left.ui-panel-dismiss-open {
-                left: 7em;
-                right: -7em;
-            }
-
-            #main-page .ui-panel-animate.ui-panel-content-wrap-position-left.ui-panel-content-wrap-open.ui-panel-content-wrap-display-reveal {
-                left: 0;
-                right: 0;
-                -webkit-transform: translate3d(7em, 0, 0);
-                -moz-transform: translate3d(7em, 0, 0);
-                transform: translate3d(7em, 0, 0);
-            }
-
-            /* Combined listview collapsible menu. */
-            /* Unset negative margin bottom on the listviews. */
-            #left-panel .ui-panel-inner > .ui-listview {
-                margin-bottom: 0;
-            }
-
-            /* Styling of the close button in both panels. */
-            #main-page .ui-panel-inner > .ui-listview .ui-first-child {
-                background: #eee;
-            }
-
-            /* Use the ui-body class of your page theme (ui-body-d in this demo) to set a background image.
-            This class will be added to the content wrapper, while the page itself gets the same background
-            as the panel before opening the panel. */
-            #main-page .ui-body-d {
-                background-repeat: repeat-x;
-                background-position: left bottom;
-            }
-        </style>
     </head>
     <body>
         <div data-role="page" id="main-page" data-theme="d">

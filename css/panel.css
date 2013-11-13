@@ -3,36 +3,24 @@ Copy all CSS from jquery.mobile.panel.css and delete the properties other than w
 Then delete the selectors/rules for display modes (reveal/push/overlay) and the position (left/right) that you don't use.
 If you don't use fixed toolbars on your page you can delete those selectors as well.
 Narrow the scope of the selectors to prevent other panels being affected by the overrides. */
-
-#main-page .ui-header{
-    height: 10em;
-    background-image: url('../images/banner.jpg');
-    background-size: contain;
-}
-
-#main-page #list-link {
-    width: 6.5em;
-}
-
-#main-page #list-link-div {
-}
-
 #main-page #left-panel.ui-panel {
-    width: 6.5em;
+    width: 7em;
 }
 
-#main-page #left-panel .ui-panel-inner {
-    padding: 0px;
+#main-page #left-panel.ui-panel-closed {
+    width: 0;
 }
 
-#main-page #left-panel .ui-panel-inner>.ui-listview {
-    margin: 0px;
+#main-page .ui-panel-position-left.ui-panel-display-reveal {
+    left: 0;
 }
 
-#main-page #left-panel .ui-listview li:first-child a{
-    padding-top: 2.85em;
+#main-page #nav-button .ui-btn-text {
+    font-size:1.5em;
+    font-weight:bold;
+    line-height: 22px;
+    font-family: "Reenie Beanie", cursive;
     text-align: center;
-    padding-bottom: 2.85em;
 }
 
 #main-page #left-panel .ui-listview li a {
@@ -43,4 +31,37 @@ Narrow the scope of the selectors to prevent other panels being affected by the 
     text-align: left;
     padding-top: .7em;
     padding-right: 1.5em;
+}
+
+#main-page .ui-panel-content-wrap-position-left.ui-panel-content-wrap-open,
+.ui-panel-dismiss-position-left.ui-panel-dismiss-open {
+    left: 7em;
+    right: -7em;
+}
+
+#main-page .ui-panel-animate.ui-panel-content-wrap-position-left.ui-panel-content-wrap-open.ui-panel-content-wrap-display-reveal {
+    left: 0;
+    right: 0;
+    -webkit-transform: translate3d(7em, 0, 0);
+    -moz-transform: translate3d(7em, 0, 0);
+    transform: translate3d(7em, 0, 0);
+}
+
+/* Combined listview collapsible menu. */
+/* Unset negative margin bottom on the listviews. */
+#left-panel .ui-panel-inner > .ui-listview {
+    margin-bottom: 0;
+}
+
+/* Styling of the close button in both panels. */
+#main-page .ui-panel-inner > .ui-listview .ui-first-child {
+    background: #eee;
+}
+
+/* Use the ui-body class of your page theme (ui-body-d in this demo) to set a background image.
+This class will be added to the content wrapper, while the page itself gets the same background
+as the panel before opening the panel. */
+#main-page .ui-body-d {
+    background-repeat: repeat-x;
+    background-position: left bottom;
 }
