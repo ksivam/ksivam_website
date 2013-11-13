@@ -8,7 +8,8 @@
     <link type="text/css" rel="stylesheet" href="http://code.jquery.com/mobile/1.3.2/jquery.mobile-1.3.2.min.css"/>
     <!--<link rel="stylesheet" href="http://view.jquerymobile.com/1.3.2/dist/demos/_assets/css/jqm-demos.css">-->
     <!--<link rel="shortcut icon" href="../../favicon.ico">-->
-    <link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Open+Sans:300,400,700">
+    <link rel='stylesheet' type='text/css' href="http://fonts.googleapis.com/css?family=Open+Sans:300,400,700">
+    <link rel='stylesheet' type='text/css' href='http://fonts.googleapis.com/css?family=Reenie+Beanie&v2'>
     <script src="http://view.jquerymobile.com/1.3.2/dist/demos/js/jquery.js"></script>
     <!--<script src="http://view.jquerymobile.com/1.3.2/dist/demos/_assets/js/index.js"></script>-->
     <script src="http://view.jquerymobile.com/1.3.2/dist/demos/js/jquery.mobile.min.js"></script>
@@ -18,28 +19,56 @@
         Then delete the selectors/rules for display modes (reveal/push/overlay) and the position (left/right) that you don't use.
         If you don't use fixed toolbars on your page you can delete those selectors as well.
         Narrow the scope of the selectors to prevent other panels being affected by the overrides. */
+        #main-page .ui-header{
+            height: 10em;
+            background-image: url('images/banner.jpg');
+            background-size: contain;
+        }
+
         #main-page #left-panel.ui-panel {
             width: 6.5em;
         }
+
         #main-page #left-panel.ui-panel-closed {
             width: 0;
         }
+
         #main-page .ui-panel-position-left.ui-panel-display-reveal {
             left: 0;
         }
-        /*#main-page .ui-panel-content-wrap-position-left.ui-panel-content-wrap-open,*/
-        /*.ui-panel-dismiss-position-left.ui-panel-dismiss-open {*/
-            /*left: 15em;*/
-            /*right: -15em;*/
-        /*}*/
 
-        /*#main-page .ui-panel-animate.ui-panel-content-wrap-position-left.ui-panel-content-wrap-open.ui-panel-content-wrap-display-reveal {*/
-            /*left: 0;*/
-            /*right: 0;*/
-            /*-webkit-transform: translate3d(15em, 0, 0);*/
-            /*-moz-transform: translate3d(15em, 0, 0);*/
-            /*transform: translate3d(15em, 0, 0);*/
-        /*}*/
+        #main-page #left-panel .ui-listview li:first-child a{
+            /*padding-top: 4.30em;*/
+            /*text-align: center;*/
+            /*padding-bottom: 4.30em;*/
+            padding-top: 2.85em;
+            text-align: center;
+            padding-bottom: 2.85em;
+        }
+
+        #main-page #left-panel .ui-listview li a {
+            font-size:1.5em;
+            font-weight:bold;
+            line-height: 22px;
+            font-family: "Reenie Beanie", cursive;
+            text-align: left;
+            padding-top: .7em;
+            padding-right: 1.5em;
+        }
+
+        #main-page .ui-panel-content-wrap-position-left.ui-panel-content-wrap-open,
+        .ui-panel-dismiss-position-left.ui-panel-dismiss-open {
+            left: 6.5em;
+            right: -6.5em;
+        }
+
+        #main-page .ui-panel-animate.ui-panel-content-wrap-position-left.ui-panel-content-wrap-open.ui-panel-content-wrap-display-reveal {
+            left: 0;
+            right: 0;
+            -webkit-transform: translate3d(6.5em, 0, 0);
+            -moz-transform: translate3d(6.5em, 0, 0);
+            transform: translate3d(6.5em, 0, 0);
+        }
 
         /* Combined listview collapsible menu. */
         /* Unset negative margin bottom on the listviews. */
@@ -137,12 +166,10 @@
     <!-- /content -->
     <div data-role="panel" id="left-panel" data-display="overlay" data-position="left" data-theme="c">
         <ul data-role="listview" data-theme="d" data-icon="false">
-            <li data-icon="delete"><a href="#" data-rel="close">Close</a></li>
-            <li data-role="list-divider">Share this page</li>
-            <li><a href="#">Twitter</a></li>
-            <li><a href="#">Facebook</a></li>
-            <li><a href="#">Google +</a></li>
-            <li><a href="#">Mail</a></li>
+            <li data-icon="home"><a href="#" data-rel="close">Home</a></li>
+            <li><a href="#">Photos</a></li>
+            <li><a href="#">Blog</a></li>
+            <li><a href="#">About</a></li>
         </ul>
     </div>
     <!-- /panel -->
