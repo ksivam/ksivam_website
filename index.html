@@ -22,16 +22,19 @@
     <body>
         <div data-role="page" id="main-page" data-theme="d">
             <a id="nav-button" href="#left-panel" data-role="button" data-icon="arrow-d" data-iconpos="right" data-inline="true">More</a>
-            <div data-role="content">
+            <div id="main-content-container" data-role="content">
             </div>
             <div data-role="panel" id="left-panel" data-display="overlay" data-position="left" data-theme="c">
                 <ul data-role="listview" data-theme="d" data-icon="false">
                     <li data-icon="home"><a href="#" data-rel="close">Home</a></li>
-                    <li><a href="#">Photos</a></li>
-                    <li><a href="#">Blog</a></li>
-                    <li><a href="#">About</a></li>
+                    <li><a id="navToPhotos" href="#" data-rel="close">Photos</a></li>
+                    <li><a id="navToBlog" href="#" data-rel="close">Blog</a></li>
+                    <li><a id="navToAbout" href="#" data-rel="close">About</a></li>
                 </ul>
             </div>
         </div>
+
+        <!-- project scripts -->
+        <script type="text/javascript" src="js/main.js"></script>
     </body>
 </html>
