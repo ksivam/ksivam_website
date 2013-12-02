@@ -21,7 +21,7 @@
 	height: 100%;
 }
 
-@media all and (max-width: 22em){
+@media all and (max-width: 24em){
 	#main-content-container.ui-content {
 		padding:0em;	
 	}
