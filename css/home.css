@@ -21,13 +21,13 @@
 	height: 100%;
 }
 
-@media all and (max-width: 36em){
+@media all and (max-width: 22em){
 	#main-content-container.ui-content {
-		padding:0.1em;	
+		padding:0em;	
 	}
 	#main-content-container .ui-grid-e .ui-block-a .ui-bar {
 		height: 6em;
-		width: 9.2em;
+		width: 9.3em;
 		padding: 0em 0em 2em 0em;
 	}
 	#main-content-container .ui-grid-e .ui-block-a {
